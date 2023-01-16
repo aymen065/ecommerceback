@@ -1,0 +1,26 @@
+spring:
+  
+  
+  application:
+    name: Ecommerce
+  datasource:
+    url: jdbc:mysql://ecommerce.cgraiekmhyn4.us-east-1.rds.amazonaws.com/ecommerce?createDatabaseIfNotExist=true
+    username: root
+    password: rootroot
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    
+    open-in-view: true
+    database: MYSQL
+    show-sql: true
+    
+    hibernate: 
+      
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 2000
